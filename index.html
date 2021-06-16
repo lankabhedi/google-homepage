@@ -1,0 +1,148 @@
+<html>
+<head>
+  <title>Google Homepage</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+	<style>
+	
+	
+	body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+#nav_bar {
+  float: right;
+}
+
+#nav_bar li {
+  display: inline-block;
+  padding: 8px;
+}
+
+#nav_bar #sign_in {
+  background: #4887ef; 
+  margin-right: 25px;
+  padding: 7px 15px;
+  border-radius: 3px; 
+  font-weight: bold;
+}
+
+.nav-links {
+  color: #404040;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li.nav-links a:hover {
+  text-decoration: underline;
+}
+
+#sign_in:hover { 
+  box-shadow: 1px 1px 5px #999;
+}
+
+#sign_in {
+  color: #fff;
+}
+
+.google #google_logo {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  clear: both;
+  padding-top: 112px;
+  padding-bottom: 20px;
+}
+.google #google_logo img{
+  width: 400px;
+}
+
+.form {
+  text-align: center;
+}
+
+#form-search { 
+  width: 450px;
+  line-height: 32px;
+  padding: 20px 10px;
+}
+
+.form #form-search {
+  padding: 0 8px;
+}
+
+#form-search:hover {
+  border-color: #e4e4e4;
+  padding-top: 0;
+}
+
+.buttons {
+  text-align: center;
+  padding-top: 30px;
+  margin-bottom: 300px;
+}
+
+
+</style>
+
+</head>
+
+
+
+<body>
+  <header>
+    <nav>
+      <ul id="nav_bar">
+        <li class="nav-links" id="gmail"><a href="https://gmail.com/">Gmail</a></li>
+        <li class="nav-links"><a href="https://photos.google.com/">Images</a></li>
+        <li id="sign_in"><a href="#">Sign In</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <div class="google">
+    <a href="#" id="google_logo"><img src="https://debugaiweb6.netlify.app/google.jpg" alt=" photo google-logo_zpspkcztsjo.png" /></a>
+  </div>
+
+
+  <div class="form">
+    <form>
+      <label for="form-search"></label>
+      <input type="text" id="form-search" placeholder="Search Google or type URL" name="search">
+    </form>
+  </div>
+
+
+  <div class="buttons">
+    <input type="submit" value="Google Search" id="google_search" onclick="search()">
+    <input type="submit" value="I'm Feeling Lucky" id="im_feeling_lucky" onclick="doodle()">
+  </div>
+
+ 
+</body>
+<script>
+
+  function search(){
+    let inputVal = document.getElementById("form-search").value;
+    window.location.replace("https://www.google.co.in/search?q="+inputVal);
+  }
+
+  function doodle(){
+    window.location.replace("https://www.google.com/doodles");
+  }
+</script>
+</html>
